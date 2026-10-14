@@ -1,0 +1,4 @@
+import { site } from "@/data/site";
+export function Experience() {
+  return <><div className="brand-ribbon" aria-label={site.experience.foot}><span>Coffee</span><span className="ribbon-star" aria-hidden="true">✳</span><span>Fresh bakes</span><span className="ribbon-star" aria-hidden="true">✳</span><span>Wood-fire pizza</span><span className="ribbon-star ribbon-last" aria-hidden="true">✳</span></div><section id="experience" className="experience page-width" aria-labelledby="experience-title"><p className="eyebrow" data-reveal>{site.experience.label}</p><div className="experience-grid"><h2 id="experience-title" data-reveal>{site.experience.first}<br /><em>{site.experience.italic}</em></h2><div data-reveal><p>{site.experience.body}</p><span className="little-rule" /><p className="eyebrow">{site.experience.foot}</p></div></div></section></>;
+}

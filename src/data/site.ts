@@ -1,0 +1,57 @@
+// Audit: context_bunilla(1).md, 14 October 2026. All marketing copy is proposed.
+export const site = {
+  name: "Bunilla",
+  area: "I-8, Islamabad",
+  status: "Coming soon",
+  email: "info@bunilla.shop",
+  instagram: "https://www.instagram.com/bunilla.isb/",
+  handle: "@bunilla.isb",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  preview: process.env.NEXT_PUBLIC_CONCEPT_PREVIEW !== "false",
+  indexing: process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true" && process.env.NEXT_PUBLIC_CONCEPT_PREVIEW === "false",
+  title: "Bunilla — Good things are brewing in I-8",
+  description: "Coffee, fresh bakes, and wood-fire pizza. Bunilla is coming soon to I-8, Islamabad. Discover the concept and follow the launch.",
+  nav: [
+    { label: "Home", href: "/#home" },
+    { label: "The Experience", href: "/#experience" },
+    { label: "What’s Coming", href: "/#offerings" },
+    { label: "Our Story", href: "/#story" },
+    { label: "Find Us", href: "/#find-us" },
+  ],
+  ui: { discover: "Discover Bunilla", follow: "Follow the launch", email: "Email us", menu: "Open menu", close: "Close menu", back: "Back to Bunilla", preview: "Concept website · Proposed redesign", skip: "Skip to content", privacy: "Privacy", legal: "Legal notice", explore: "Explore the experience" },
+  hero: {
+    eyebrow: "A new neighborhood moment",
+    first: "Good things",
+    italic: "are brewing",
+    last: "in I-8.",
+    body: "Coffee, fresh bakes, and wood-fire pizza. A little everyday joy, coming soon to Islamabad.",
+    caption: "A first taste of what’s to come.",
+    photoNote: "Bunilla promotional imagery",
+  },
+  experience: { label: "The Bunilla feeling", first: "Your daily pause.", italic: "Our kind of place.", body: "A coffee before the day begins. Something fresh to share. A reason to stay a little longer. We’re imagining a warm neighborhood space for all of it.", foot: "Coffee · Fresh bakes · Wood-fire pizza" },
+  offerings: {
+    label: "Three good reasons to linger", title: "A little of what", italic: "you’ll love.", note: "A taste of the concept. The opening menu is still to come.",
+    chapters: [
+      { number: "01", category: "Coffee", title: "A cup worth", italic: "slowing down for.", body: "For quiet mornings, catch-ups, and a moment that’s just yours. Coffee is at the heart of what we’re bringing to I-8.", caption: "The coffee moment · Bunilla promotional imagery" },
+      { number: "02", category: "Fresh bakes", title: "Something fresh", italic: "from the oven.", body: "A little comfort with your coffee. Our bakery chapter is all about the simple pleasure of a fresh bake and good company.", caption: "A glimpse of the bakes · Crop of Bunilla promotional imagery" },
+      { number: "03", category: "Wood-fire pizza", title: "Good things", italic: "worth sharing.", body: "Coffee dates that turn into longer conversations. Wood-fire pizza is part of the Bunilla promise — another reason to gather around the table.", caption: "Wood-fire pizza · Illustrated concept, menu to come", graphic: "Made to share", graphicSmall: "Wood-fire pizza", graphicFoot: "Pull up a chair." },
+    ],
+  },
+  story: { label: "Our story, just beginning", first: "A place for", italic: "your people.", body: "Bunilla is coming to I-8 with a simple intention: thoughtful food, good coffee, and a welcoming place to meet. For old friends, new faces, and all the little moments in between.", values: ["Something delicious", "Care in the ingredients", "Community at the heart"], link: "Come along for the story", caption: "The atmosphere we’re sharing · Bunilla promotional imagery; venue status unverified" },
+  atmosphere: { label: "A glimpse of Bunilla", title: "Warm corners.", italic: "Good company.", body: "A first look at the mood, through Bunilla’s published launch imagery.", poster: "From the launch scrapbook", posterNote: "Original Bunilla coming-soon artwork", detail: "The details set the mood", detailNote: "Detail from Bunilla’s published interior imagery" },
+  launch: { label: "I-8, Islamabad · Coming soon", first: "Your new favorite", italic: "little ritual.", body: "The first cup. The first bake. The first get-together. Follow Bunilla on Instagram and be there from the beginning.", stamp: "Good things ahead", foot: "See you soon, Islamabad." },
+  footer: { statement: "Coffee. Fresh bakes. Wood-fire pizza.\nA new neighborhood moment.", location: "Opening soon in I-8, Islamabad", locationNote: "We’ll share the opening details as they’re announced.", explore: "Explore", connect: "Say hello", copyright: "© 2026 Bunilla. Design concept for review." },
+  legal: { title: "Legal notice", label: "Website information", intro: "This is a proposed website redesign for Bunilla, presented for review. It is not an officially endorsed replacement for Bunilla’s current website.", review: "Draft for owner review · 14 October 2026", sections: [ { title: "Business information", body: "Bunilla is promoted as a forthcoming café and bakery in I-8, Islamabad, Pakistan. The published categories are coffee, fresh bakes, and wood-fire pizza. An opening date and exact storefront address have not been confirmed for this concept." }, { title: "Contact", body: "The public business contact is info@bunilla.shop. Email delivery has not been independently tested. Instagram is linked to the published bunilla.isb profile." }, { title: "Artwork and publication", body: "Original logo and promotional imagery are sourced from Bunilla’s public website. Their use here is for a design proposal. Ownership, publication permission, business operator details, and final copy must be confirmed before an authorized launch." } ] },
+  privacy: { title: "Privacy information", label: "About this preview", intro: "This draft describes the features of this website concept. The owner should review it and confirm the hosting arrangements before an authorized public launch.", review: "Draft for owner review · 14 October 2026", sections: [ { title: "What this website collects", body: "This app has no signup form, customer account, ordering system, payment processing, analytics scripts, or advertising trackers. It does not intentionally store visitor information in cookies or browser storage. Fonts and images are served with the website." }, { title: "Technical requests", body: "Your browser requests pages, fonts, scripts, and images from the server. The hosting service may process technical request information, such as an IP address and request time, according to its configuration. The future operator and hosting retention details must be confirmed before publication." }, { title: "Instagram and email", body: "Following the launch opens Instagram, which has its own data practices. Selecting an email link opens your email application; your message is handled by the relevant email providers and business recipient. This website does not process or retain that message." }, { title: "Questions", body: "For questions about Bunilla, use the published email info@bunilla.shop. The responsible business operator and final privacy contact arrangements require owner confirmation." } ] },
+  notFound: { label: "404 · A little detour", first: "This page is", italic: "still brewing.", body: "Let’s get you back to the good things.", cta: "Back to Bunilla" },
+} as const;
+
+export const assets = {
+  logo: "/assets/bunilla/logo.webp",
+  wordmark: "/assets/bunilla/wordmark.webp",
+  cups: "/assets/bunilla/cups.webp",
+  bakes: "/assets/bunilla/bakes.webp",
+  interior: "/assets/bunilla/interior.webp",
+  detail: "/assets/bunilla/interior-detail.webp",
+  poster: "/assets/bunilla/poster.webp",
+};

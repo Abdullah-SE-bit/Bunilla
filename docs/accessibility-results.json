@@ -1,0 +1,32 @@
+[
+  {
+    "route": "/",
+    "width": 1440,
+    "violations": []
+  },
+  {
+    "route": "/",
+    "width": 375,
+    "violations": []
+  },
+  {
+    "route": "/privacy",
+    "width": 375,
+    "violations": []
+  },
+  {
+    "route": "/legal-notice",
+    "width": 375,
+    "violations": []
+  },
+  {
+    "route": "/missing-page",
+    "width": 375,
+    "violations": []
+  },
+  {
+    "route": "mobile-menu",
+    "width": 375,
+    "violations": []
+  }
+]
