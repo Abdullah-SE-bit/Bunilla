@@ -3,8 +3,9 @@ import AxeBuilder from "@axe-core/playwright";
 import { writeFile } from "node:fs/promises";
 
 test("WCAG AA scans on homepage, mobile drawer, privacy, legal and 404", async ({ page }) => {
+  test.setTimeout(90000);
   const report: { route: string; width: number; violations: unknown[] }[] = [];
-  for (const [route, width] of [["/", 1440], ["/", 375], ["/privacy", 375], ["/legal-notice", 375], ["/missing-page", 375]] as const) {
+  for (const [route, width] of [["/", 1440], ["/", 375], ["/careers", 1440], ["/careers", 375], ["/privacy", 375], ["/legal-notice", 375], ["/missing-page", 375]] as const) {
     await page.setViewportSize({ width, height: 900 });
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto(route);
@@ -31,7 +32,7 @@ test("desktop navigation offsets and keyboard skip link", async ({ page }) => {
   await expect(page.getByRole("link", { name: "Skip to content" })).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.locator("#main-content")).toBeFocused();
-  for (const [name, target] of [["The Experience", "experience"], ["What’s Coming", "offerings"], ["Our Story", "story"], ["Find Us", "find-us"]]) {
+  for (const [name, target] of [["The café", "experience"], ["What’s coming", "offerings"], ["About Bunilla", "story"], ["Find us", "find-us"]]) {
     await page.getByRole("navigation", { name: "Main navigation", exact: true }).getByRole("link", { name, exact: true }).click();
     await expect(page).toHaveURL(new RegExp(`#${target}$`));
     const y = await page.locator(`#${target}`).evaluate(element => element.getBoundingClientRect().top);

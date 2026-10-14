@@ -10,6 +10,16 @@
     "violations": []
   },
   {
+    "route": "/careers",
+    "width": 1440,
+    "violations": []
+  },
+  {
+    "route": "/careers",
+    "width": 375,
+    "violations": []
+  },
+  {
     "route": "/privacy",
     "width": 375,
     "violations": []

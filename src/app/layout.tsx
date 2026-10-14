@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: site.title, template: "%s | Bunilla" }, description: site.description,
   robots: { index: site.indexing, follow: site.indexing },
-  openGraph: { title: site.title, description: site.description, type: "website", siteName: site.preview ? "Bunilla design concept" : site.name, locale: "en_PK" },
+  openGraph: { title: site.title, description: site.description, type: "website", siteName: site.name, locale: "en_PK" },
   twitter: { card: "summary_large_image", title: site.title, description: site.description },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

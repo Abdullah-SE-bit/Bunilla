@@ -1,5 +1,15 @@
 # Implementation checklist
 
+## Careers and copy follow-up
+
+- [x] Inspect existing routes, components, tokens, GSAP, navigation and metadata.
+- [x] Add `/careers`, exact five advertised roles, two categories and position-specific WhatsApp links.
+- [x] Integrate desktop/mobile/footer navigation and a small homepage hiring announcement.
+- [x] Review all DOM copy, accessible labels, alt text, titles and social descriptions; remove long dashes.
+- [x] Extend current GSAP with restrained job-list staggers and existing fallbacks.
+- [x] Validate final production build, all 21 browser tests and eight accessibility scans; record results.
+- [x] Prepare verified update for the previously authorized GitHub repository; push confirmation in handover.
+
 Source audit and master brief read in full. Empty app repository; original briefing files retained.
 
 - [x] P0: inspect workspace, identify verified facts and four original assets.

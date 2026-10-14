@@ -1,0 +1,72 @@
+.page { min-width: 0; }
+.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 10%; align-items: center; padding-block: 65px 70px; }
+.heroCopy h1 { font-size: clamp(72px,7.7vw,116px); margin-block: 28px; }
+.heroCopy h1 span, .heroCopy h1 em { display: block; }
+.heroBody { font-size: 14px; max-width: 365px; margin-bottom: 28px; }
+.location { margin-top: 32px; }
+.heroVisual { margin: 0; }
+.heroPhoto { position: relative; aspect-ratio: .98; overflow: hidden; border-radius: 46% 46% 2px 2px; }
+.heroPhoto img { object-position: 50% 64%; }
+.heroVisual figcaption { font-size: 9px; margin-top: 12px; }
+.openingsHeader { border-top: 1px solid var(--line); display: grid; grid-template-columns: 1.3fr 1fr; gap: 10%; align-items: end; padding-block: 68px 60px; }
+.openingsHeader h2 { margin-top: 22px; }
+.openingsHeader > p { font-size: 13px; max-width: 360px; }
+.group { padding-block: 70px 60px; }
+.kitchen { background: var(--burgundy); color: var(--cream); }
+.women { background: color-mix(in srgb, var(--pink) 22%, var(--cream)); color: var(--brown); }
+.groupInner { display: grid; grid-template-columns: 1fr 1.65fr; gap: 10%; }
+.groupIntro { padding-top: 13px; }
+.groupNumber { font-family: var(--font-display); font-size: 48px; line-height: 1; opacity: .7; }
+.groupIntro h3 { font-size: clamp(42px,4vw,64px); margin-block: 24px 22px; }
+.groupIntro > p { font-size: 13px; max-width: 270px; }
+.groupRule { display: block; width: 62px; height: 1px; background: currentColor; opacity: .4; margin-top: 30px; }
+.job { display: grid; grid-template-columns: 35px 1fr; gap: 20px; padding-block: 28px 32px; border-top: 1px solid currentColor; border-color: rgba(248,242,230,.3); }
+.women .job { border-color: var(--line); }
+.jobIndex { padding-top: 6px; opacity: .8; }
+.jobDetails { transition: transform .3s; }
+.jobDetails > .eyebrow { font-size: 9px; }
+.job h4 { font-family: var(--font-display); font-size: clamp(32px,3.2vw,49px); font-weight: 400; letter-spacing: -.025em; line-height: 1.15; margin: 10px 0 12px; }
+.specialization { font-size: 13px; margin-bottom: 10px; }
+.jobLocation { font-size: 11px; }
+.apply { margin-top: 14px; }
+.kitchen a:focus-visible { outline-color: var(--cream); }
+.apply:hover { opacity: .9; }
+.contact { display: grid; grid-template-columns: 1.3fr 1fr; gap: 10%; padding-block: 80px 95px; }
+.contact h2 { font-size: clamp(50px,5vw,76px); margin-block: 22px; }
+.contactBody { max-width: 350px; font-size: 13px; }
+.contactNumber { border-left: 1px solid var(--line); padding-left: 35px; }
+.phone { font-family: var(--font-display); font-size: clamp(36px,4vw,57px); letter-spacing: .015em; line-height: 1.3; margin-top: 13px; user-select: all; }
+.contactHint { font-size: 10px; max-width: 300px; margin-top: 10px; }
+.contactNumber .button { margin-top: 25px; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .job:hover .jobDetails { transform: translateX(5px); } }
+@media (max-width: 1100px) {
+  .hero { gap: 7%; padding-block: 55px 60px; }
+  .heroCopy h1 { font-size: 8.5vw; }
+  .groupInner { gap: 7%; grid-template-columns: 1fr 1.5fr; }
+  .contact { gap: 7%; }
+}
+@media (max-width: 767px) {
+  .hero { grid-template-columns: 1fr; gap: 35px; padding-block: 38px 42px; }
+  .heroCopy h1 { font-size: clamp(65px,16vw,95px); margin-block: 24px; }
+  .heroBody { font-size: 13px; max-width: 345px; }
+  .location { margin-top: 24px; }
+  .heroVisual { width: 88%; margin-left: auto; }
+  .heroPhoto { aspect-ratio: 1.17; }
+  .openingsHeader { grid-template-columns: 1fr; gap: 25px; padding-block: 45px 40px; }
+  .openingsHeader > p { font-size: 12px; }
+  .group { padding-block: 40px 30px; }
+  .groupInner { grid-template-columns: 1fr; gap: 28px; }
+  .groupIntro { position: relative; padding: 0; }
+  .groupNumber { position: absolute; right: 0; top: 8px; font-size: 36px; }
+  .groupIntro h3 { font-size: 44px; margin-block: 6px 15px; padding-right: 45px; }
+  .groupIntro > p { font-size: 12px; max-width: 280px; }
+  .groupRule { display: none; }
+  .job { gap: 12px; grid-template-columns: 23px 1fr; padding-block: 24px 28px; }
+  .job h4 { font-size: 35px; }
+  .specialization { font-size: 12px; }
+  .contact { grid-template-columns: 1fr; gap: 30px; padding-block: 48px 60px; }
+  .contact h2 { font-size: 53px; }
+  .contactNumber { border-left: 0; border-top: 1px solid var(--line); padding: 25px 0 0; }
+  .phone { font-size: 44px; }
+}
+@media (prefers-reduced-motion: reduce) { .jobDetails { transition: none; } }

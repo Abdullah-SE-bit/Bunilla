@@ -50,7 +50,7 @@ test("mobile drawer traps focus, closes with Escape and follows anchors", async 
   await expect(page.getByRole("dialog")).not.toBeVisible();
   await expect(opener).toBeFocused();
   await opener.click();
-  await page.getByRole("dialog").getByRole("link", { name: "Our Story" }).click();
+  await page.getByRole("dialog").getByRole("link", { name: "About Bunilla" }).click();
   await expect(page.getByRole("dialog")).not.toBeVisible();
   await expect(page).toHaveURL(/#story/);
   await expect(page.locator("#story h2")).toBeInViewport();
@@ -71,7 +71,7 @@ test("privacy, legal notice, real 404, metadata and preview policy", async ({ pa
   }
   const missing = await page.goto("/subpage");
   expect(missing?.status()).toBe(404);
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("still brewing");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("that page");
   await page.getByRole("link", { name: "Back to Bunilla", exact: true }).click();
   await expect(page.locator(".hero h1")).toBeVisible();
   const robots = await request.get("/robots.txt");

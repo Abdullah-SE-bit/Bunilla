@@ -13,6 +13,13 @@ export function Motion() {
       gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach(element => {
         gsap.from(element, { y: 24, opacity: .7, duration: .8, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 91%", once: true }, clearProps: "all" });
       });
+      // Careers uses the existing motion system with a short, grouped job stagger.
+      gsap.utils.toArray<HTMLElement>("[data-job-list]").forEach(list => {
+        gsap.from(list.querySelectorAll("[data-job-card]"), {
+          y: 18, opacity: .75, duration: .65, stagger: .08, ease: "power3.out",
+          scrollTrigger: { trigger: list, start: "top 91%", once: true }, clearProps: "all",
+        });
+      });
     });
     media.add("(min-width: 1024px) and (prefers-reduced-motion: no-preference)", () => {
       gsap.utils.toArray<HTMLElement>("[data-depth]").forEach(element => {
